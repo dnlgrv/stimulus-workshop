@@ -1,22 +1,22 @@
-<header class="fixed top-0 left-0 right-0 p-4 m-4 rounded-lg bg-slate-700 text-slate-400">
+<header class="fixed top-0 left-0 right-0 p-4 m-4 rounded-lg bg-slate-700 text-slate-50">
   <nav class="flex justify-between">
-    <button class="rounded-full p-3 text-slate-50 transition hover:bg-slate-600">
+    <%= button_to "#", class: "rounded-full p-3 transition enabled:hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30" do %>
       <%= queue_icon %>
-    </button>
+    <% end %>
 
     <div class="flex items-center gap-12">
-      <%= button_to exercise.previous_exercise, class: "rounded-full p-3 text-slate-50 transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.has_previous_exercise? do %>
+      <%= button_to exercise.previous_exercise, class: "rounded-full p-3 text-slate-50 transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.has_previous_exercise?, method: :get do %>
         <%= left_arrow_icon %>
       <% end %>
 
-      <span class="text-slate-50"><%= exercise.name %></span>
+      <span><%= exercise.name %></span>
 
-      <%= button_to exercise.next_exercise, class: "rounded-full p-3 text-slate-50 transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.has_next_exercise? do %>
+      <%= button_to exercise.next_exercise, class: "rounded-full p-3 text-slate-50 transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.has_next_exercise?, method: :get do %>
         <%= right_arrow_icon %>
       <% end %>
     </div>
 
-    <%= button_to "#", class: "rounded-full p-3 transition enabled:hover:bg-slate-600 enabled:hover:text-slate-50 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.instructions_available? do %>
+    <%= button_to "#", class: "rounded-full p-3 transition enabled:hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.instructions_available? do %>
       <%= book_icon %>
     <% end %>
   </nav>
