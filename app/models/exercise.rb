@@ -8,4 +8,8 @@ class Exercise < ApplicationRecord
   def to_param
     name.parameterize
   end
+
+  def render_in(view_context)
+    view_context.render partial: "exercises/#{to_param}/exercise"
+  end
 end
