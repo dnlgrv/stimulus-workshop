@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
-  default_scope ->{ order(position: :asc) }
+  include Sequenced
 
   def self.find_by_slug(slug)
     find_by(name: slug.titleize)
