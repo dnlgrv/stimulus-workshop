@@ -1,26 +1,4 @@
-<header class="fixed top-0 left-0 right-0 p-4 m-4 rounded-lg bg-slate-700 text-slate-400">
-  <nav class="flex justify-between">
-    <button class="rounded-full p-3 transition hover:bg-slate-600 hover:text-slate-50">
-      <%= queue_icon %>
-    </button>
-
-    <div class="flex items-center gap-12">
-      <button class="rounded-full p-3 transition hover:bg-slate-600 hover:text-slate-50">
-        <%= left_arrow_icon %>
-      </button>
-
-      <span class="text-slate-50"><%= @exercise.name %></span>
-
-      <button class="rounded-full p-3 transition hover:bg-slate-600 hover:text-slate-50">
-        <%= right_arrow_icon %>
-      </button>
-    </div>
-
-    <button class="rounded-full p-3 transition hover:bg-slate-600 hover:text-slate-50">
-      <%= book_icon %>
-    </button>
-  </nav>
-</header>
+<%= render partial: "layouts/navigation", locals: { exercise: @exercise } %>
 
 <article class="mx-auto mt-44">
   <%= render @exercise %>
