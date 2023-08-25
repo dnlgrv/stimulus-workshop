@@ -7,11 +7,22 @@
 
   <p>
     Here we have some HTML markup, but it's lacking any kind of interaction.
-    There's a Stimulus controller available to you called HelloWorldController
-    (app/javascript/controllers/hello_world_controller.js).
+    There's a Stimulus controller available to you already called HelloWorldController.
   </p>
 
   <p>
     Connect it up and make that button sing!
   </p>
+
+  <hr>
+
+  <dl>
+    <dt>Exercise file</dt>
+    <dd><%= exercise.file_path.relative_path_from(Rails.root) %></dd>
+
+    <dt>Stimulus Controller</dt>
+    <dd>
+      <%= Rails.root.join("app", "javascript", "controllers", "hello_world_controller.js").relative_path_from(Rails.root) %>
+    </dd>
+  </dl>
 </div>

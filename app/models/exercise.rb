@@ -17,6 +17,10 @@ class Exercise < ApplicationRecord
     instructions.present?
   end
 
+  def file_path
+    Rails.root.join("app", "views", "exercises", to_param, "exercise.html.erb")
+  end
+
   def render_in(view_context)
     view_context.render partial: "exercises/#{to_param}/exercise"
   end
