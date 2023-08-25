@@ -10,7 +10,11 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="bg-slate-50">
-    <%= yield %>
+  <body class="bg-slate-50" data-controller="layout" data-layout-visibility-class="hidden">
+    <%= render partial: "layouts/navigation", locals: { exercise: @exercise } %>
+
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

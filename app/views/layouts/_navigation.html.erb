@@ -16,7 +16,7 @@
       <% end %>
     </div>
 
-    <%= button_to "#", class: "rounded-full p-3 transition enabled:hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.instructions_available? do %>
+    <%= content_tag :button, class: "rounded-full p-3 transition enabled:hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-30", disabled: !exercise.instructions_available?, data: { action: "layout#toggleInstructions" } do %>
       <%= book_icon %>
     <% end %>
   </nav>

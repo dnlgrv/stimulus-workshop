@@ -9,8 +9,12 @@ class Exercise < ApplicationRecord
     name.parameterize
   end
 
+  def instructions
+    @instructions ||= Exercise::Instructions.new(self)
+  end
+
   def instructions_available?
-    Rails.root.join("app", "views", "exercises", to_param, "_instructions.html.erb").exist?
+    instructions.present?
   end
 
   def render_in(view_context)
