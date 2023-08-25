@@ -9,3 +9,6 @@ application.register("hello-world", HelloWorldController)
 
 import LayoutController from "./layout_controller"
 application.register("layout", LayoutController)
+
+import LoggerController from "./logger_controller"
+application.register("logger", LoggerController)
