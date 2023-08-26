@@ -12,3 +12,6 @@ application.register("layout", LayoutController)
 
 import LoggerController from "./logger_controller"
 application.register("logger", LoggerController)
+
+import TabsController from "./tabs_controller"
+application.register("tabs", TabsController)
