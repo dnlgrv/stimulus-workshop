@@ -1,0 +1,5 @@
+<%= turbo_stream.action :clearInput, "invitation_name" %>
+
+<%= turbo_stream.append :invitees_list do %>
+  <%= render @person %>
+<% end %>

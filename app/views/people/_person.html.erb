@@ -1,0 +1,10 @@
+<li class="py-4 flex justify-between text-slate-700 items-center" id="<%= dom_id person %>">
+  <div class="flex items-baseline gap-3">
+    <%= person.name %>
+    <span class="text-slate-400 text-sm"><%= person.email %></span>
+  </div>
+
+  <%= button_to invitee_path(person), method: :delete, class: "p-2 text-slate-400 hover:text-slate-900", data: { turbo_confirm: "Cancel invite?" } do %>
+    <%= cross_icon %>
+  <% end %>
+</li>
