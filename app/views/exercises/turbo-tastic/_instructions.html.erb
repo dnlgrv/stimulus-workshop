@@ -1,0 +1,37 @@
+<div class="prose">
+  <p>It's Turbo Time!</p>
+
+  <p>
+    Just to show how Stimulus can work in conjunction with Turbo, let's give it
+    a whirl.
+  </p>
+
+  <p>
+    We have a list of people who have access to this workshop, but we want to
+    invite more. We could just guess their names and click the button, but it
+    would be nice to have some kind of auto-complete/typeahead available to
+    us wouldn't it?
+  </p>
+
+  <p>
+    We have all the necessary Rails models and controllers available to us, it's
+    up to us to do all the wiring up. We know we can use Turbo to
+    make the request, but then how do we get that data into the right place?
+  </p>
+
+  <p>
+    We also want to know who we have already invited.
+  </p>
+
+  <hr>
+
+  <dl>
+    <dt>Exercise file</dt>
+    <dd><%= exercise.file_path.relative_path_from(Rails.root) %></dd>
+
+    <dt>Stimulus Controller</dt>
+    <dd>
+      <%= Rails.root.join("app", "javascript", "controllers", "autocomplete_controller.js").relative_path_from(Rails.root) %>
+    </dd>
+  </dl>
+</div>
