@@ -1,13 +1,13 @@
 <section class="mb-12 mx-auto w-fit p-8 pt-6 bg-slate-300 rounded-lg">
   <h1 class="text-2xl text-slate-700 font-semibold tracking-wide mb-4">Invite someone new</h1>
 
-  <%= form_with url: invitees_path, scope: :invitation, class: "flex gap-2" do |f| %>
+  <%= form_with model: Invitation.new, class: "flex gap-2" do |f| %>
     <div class="w-64">
-      <%= f.text_field :name, placeholder: "Search by name...", class: "rounded p-2 w-full" %>
+      <%= f.text_field :email, placeholder: "dave@example.org", class: "rounded p-2 w-full" %>
     </div>
 
     <%= f.submit "Invite", class: "rounded bg-amber-500 px-4 cursor-pointer text-xs uppercase font-semibold text-amber-900 hover:bg-amber-600" %>
   <% end %>
 </section>
 
-<%= turbo_frame_tag :invitees, src: invitees_path %>
+<%= turbo_frame_tag :invitations, src: invitations_path %>
