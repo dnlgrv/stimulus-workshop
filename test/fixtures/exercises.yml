@@ -17,3 +17,7 @@ totally_tabular:
 turbo_tastic:
   name: Turbo Tastic
   position: 4
+
+resources:
+  name: Resources
+  position: 5
