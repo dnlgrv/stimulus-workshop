@@ -10,18 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_26_154645) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_24_122442) do
   create_table "exercises", force: :cascade do |t|
     t.string "name", null: false
     t.integer "position", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.boolean "invited"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
