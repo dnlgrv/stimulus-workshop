@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
+* Ruby 3.1.4
+* NodeJS 20.4.0
 
-* Ruby version
+## Setup
 
-* System dependencies
+1. `bin/setup`
+2. `bin/rails db:seed`
+3. `yarn install`
 
-* Configuration
+## Running
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bin/dev`
