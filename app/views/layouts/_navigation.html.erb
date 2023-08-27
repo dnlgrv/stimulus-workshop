@@ -1,6 +1,6 @@
 <header class="fixed top-0 left-0 right-0 p-4 m-4 rounded-lg bg-slate-700 text-slate-50">
   <nav class="flex justify-between">
-    <details data-controller="lazy-load" data-lazy-load-url-value="<%= exercises_path(current_exercise: exercise.id) %>" data-action="toggle->lazy-load#load">
+    <details data-controller="lazy-load menu" data-lazy-load-url-value="<%= exercises_path(current_exercise: exercise.id) %>" data-action="toggle->lazy-load#load menu:click:outside->menu#close:prevent">
       <summary class="block rounded-full p-3 transition cursor-pointer hover:bg-slate-600">
         <%= queue_icon %>
       </summary>
