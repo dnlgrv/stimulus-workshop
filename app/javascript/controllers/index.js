@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import AutocompleteController from "./autocomplete_controller"
-application.register("autocomplete", AutocompleteController)
-
 import HelloWorldController from "./hello_world_controller"
 application.register("hello-world", HelloWorldController)
 
