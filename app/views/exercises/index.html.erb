@@ -1,0 +1,16 @@
+<%= turbo_frame_tag :exercises do %>
+  <nav class="absolute z-10 left-0 top-24 rounded bg-slate-500 p-4 shadow w-64 text-slate-400">
+    <ol class="space-y-2">
+      <% @exercises.each do |exercise| %>
+        <li>
+          <%= link_to exercise,
+            class: token_list("pl-2 pr-4 py-2 rounded block transition hover:text-white hover:bg-slate-400", {"bg-slate-400 text-white": exercise == @current_exercise}),
+            data: { turbo_frame: "_top" } do %>
+            <%= exercise.position + 1 %>.
+            <%= exercise.name %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>

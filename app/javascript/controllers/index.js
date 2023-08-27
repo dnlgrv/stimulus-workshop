@@ -13,6 +13,9 @@ application.register("hello-world", HelloWorldController)
 import LayoutController from "./layout_controller"
 application.register("layout", LayoutController)
 
+import LazyLoadController from "./lazy_load_controller"
+application.register("lazy-load", LazyLoadController)
+
 import LoggerController from "./logger_controller"
 application.register("logger", LoggerController)
 
