@@ -13,16 +13,4 @@
     We're going to want to manage some kind of state (like which tab is
     selected), and then determine how to to show/hide each tab's content.
   </p>
-
-  <hr>
-
-  <dl>
-    <dt>Exercise file</dt>
-    <dd><%= exercise.file_path.relative_path_from(Rails.root) %></dd>
-
-    <dt>Stimulus Controller</dt>
-    <dd>
-      <%= Rails.root.join("app", "javascript", "controllers", "tabs_controller.js").relative_path_from(Rails.root) %>
-    </dd>
-  </dl>
 </div>

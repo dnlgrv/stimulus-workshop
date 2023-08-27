@@ -15,16 +15,4 @@
     Take a look at the controller code and the excise HTML, and just by
     decorating the HTML you should be able to accomplish this task.
   </p>
-
-  <hr>
-
-  <dl>
-    <dt>Exercise file</dt>
-    <dd><%= exercise.file_path.relative_path_from(Rails.root) %></dd>
-
-    <dt>Stimulus Controller</dt>
-    <dd>
-      <%= Rails.root.join("app", "javascript", "controllers", "logger_controller.js").relative_path_from(Rails.root) %>
-    </dd>
-  </dl>
 </div>

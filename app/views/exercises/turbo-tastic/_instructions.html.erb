@@ -32,16 +32,4 @@
     Can you clear out the invitation input when I send an invitation so I can
     quickly send the next one?
   </p>
-
-  <hr>
-
-  <dl>
-    <dt>Exercise file</dt>
-    <dd><%= exercise.file_path.relative_path_from(Rails.root) %></dd>
-
-    <dt>Stimulus Controller</dt>
-    <dd>
-      <%= Rails.root.join("app", "javascript", "controllers", "autocomplete_controller.js").relative_path_from(Rails.root) %>
-    </dd>
-  </dl>
 </div>
