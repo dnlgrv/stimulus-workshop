@@ -1,4 +1,4 @@
-<%= turbo_frame_tag :tab_content do %>
+<%= turbo_frame_tag @turbo_frame_id do %>
   <% if @file.markdown? %>
     <div class="prose">
       <%== @file.markdown_content %>
