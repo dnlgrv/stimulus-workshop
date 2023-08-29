@@ -1,7 +1,6 @@
 class ExercisesController < ApplicationController
   def index
     @exercises = Exercise.all
-    @current_exercise = Exercise.find(params[:current_exercise])
   end
 
   def show
