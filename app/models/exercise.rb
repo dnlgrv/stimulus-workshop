@@ -10,8 +10,15 @@ class Exercise < ApplicationRecord
     name.parameterize
   end
 
-  def content
-    text = Rails.root.join("app", "exercises", "#{to_param}.md").read
-    Kramdown::Document.new(text).to_html
+  def related_files_as_files
+    Array.wrap(related_files).map do |f|
+      Exercise::File.new(Rails.root.join(f))
+    end.unshift(overview_file)
+  end
+
+  private
+
+  def overview_file
+    Exercise::File.new(Rails.root.join("app", "exercises", "#{to_param}.md"), "Overview")
   end
 end

@@ -1,3 +1,1 @@
-<article class="prose">
-  <%= render html: exercise.content.html_safe %>
-</article>
+<%= render partial: "exercises/#{exercise.to_param}" %>

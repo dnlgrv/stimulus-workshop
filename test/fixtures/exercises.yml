@@ -6,7 +6,7 @@ hello_world:
   name: Hello World
   position: 1
   related_files:
-    - app/views/exercises/hello-world.html.erb
+    - app/views/exercises/_hello-world.html.erb
     - app/javascript/controllers/hello_world_controller.js
 
 eventful:

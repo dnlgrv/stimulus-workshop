@@ -1,5 +1,15 @@
-<div class="mx-auto p-4 min-h-screen flex">
-  <div class="w-full flex flex-col gap-14 lg:flex-row lg:gap-6">
+<article class="p-4 min-h-screen flex">
+  <div class="w-1/2 gap-6">
     <%= render @exercise %>
   </div>
-</div>
+
+  <aside class="w-1/2">
+    <nav>
+      <% @exercise.related_files_as_files.each do |file| %>
+        <%= link_to file.name, exercise_file_path(@exercise, file), data: { turbo_frame: :tab_content } %>
+      <% end %>
+    </nav>
+
+    <%= turbo_frame_tag :tab_content, src: exercise_file_path(@exercise, @exercise.related_files_as_files.first) %>
+  </aside>
+</article>
