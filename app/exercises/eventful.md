@@ -6,5 +6,5 @@ The JavaScript library is emitting events on a regular basis, it's called
 Puller. Right now, Puller is logging those events to the console, but we want
 our customers to be able to see those events on the screen.
 
-Take a look at the controller code and the excise HTML, and just by decorating
-the HTML you should be able to accomplish this task.
+Take a look at the LoggerController and the exercise HTML, and just by
+decorating the HTML you should be able to accomplish this task.
