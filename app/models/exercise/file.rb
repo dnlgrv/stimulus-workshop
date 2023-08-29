@@ -16,7 +16,7 @@ class Exercise::File
     @name || File.basename(@path)
   end
 
-  def html?
+  def erb?
     @path.extname == ".erb"
   end
 
@@ -44,8 +44,8 @@ class Exercise::File
 
   def lexer
     @lexer ||= begin
-      if html?
-        Rouge::Lexers::HTML.new
+      if erb?
+        Rouge::Lexers::ERB.new
       elsif javascript?
         Rouge::Lexers::Javascript.new
       end

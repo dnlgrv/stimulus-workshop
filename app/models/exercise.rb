@@ -16,6 +16,10 @@ class Exercise < ApplicationRecord
     end.unshift(overview_file)
   end
 
+  def initial_file
+    related_files_as_files.first
+  end
+
   private
 
   def overview_file
