@@ -10,6 +10,6 @@
       <% end %>
     </nav>
 
-    <%= turbo_frame_tag :tab_content, src: exercise_file_path(@exercise, @exercise.related_files_as_files.first) %>
+    <%= turbo_frame_tag :tab_content, src: exercise_file_path(@exercise, @exercise.related_files_as_files.first), target: "_top" %>
   </aside>
 </article>
