@@ -15,4 +15,4 @@ website is a great place to refer back to as you learn more or need a reminder.
 Shout out questions and make suggestions! There are a lot of different
 approaches you can use for each of the exercises.
 
-Ready? [Let's get started]("/exercises/hello-world")
+Ready? [Let's get started](/exercises/hello-world)

@@ -10,19 +10,8 @@ class Exercise < ApplicationRecord
     name.parameterize
   end
 
-  def instructions
-    @instructions ||= Exercise::Instructions.new(self)
-  end
-
-  def instructions_available?
-    instructions.present?
-  end
-
-  def file_path
-    Rails.root.join("app", "views", "exercises", to_param, "exercise.html.erb")
-  end
-
-  def render_in(view_context)
-    view_context.render partial: "exercises/#{to_param}/exercise"
+  def content
+    text = Rails.root.join("app", "exercises", "#{to_param}.md").read
+    Kramdown::Document.new(text).to_html
   end
 end
