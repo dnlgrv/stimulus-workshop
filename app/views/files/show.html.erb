@@ -1,9 +1,11 @@
 <%= turbo_frame_tag :tab_content do %>
   <% if @file.markdown? %>
     <div class="prose">
-      <%= @file.markdown_content %>
+      <%== @file.markdown_content %>
     </div>
   <% else %>
-    <%= @file.content %>
+    <div class="bg-[#f6f8fa] p-6 rounded">
+      <pre class="syntax overflow-x-scroll pb-4"><%== @file.content %></pre>
+    </div>
   <% end %>
 <% end %>

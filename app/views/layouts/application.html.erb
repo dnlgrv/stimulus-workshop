@@ -9,6 +9,10 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
+    <style>
+      <%= Rouge::Theme.find("github").render(scope: ".syntax") %>
+    </style>
+
     <%= yield :head %>
   </head>
 

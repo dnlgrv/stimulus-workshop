@@ -16,15 +16,39 @@ class Exercise::File
     @name || File.basename(@path)
   end
 
+  def html?
+    @path.extname == ".erb"
+  end
+
+  def javascript?
+    @path.extname == ".js"
+  end
+
   def markdown?
     @path.extname == ".md"
   end
 
   def content
-    @path.read
+    formatter.format(lexer.lex(@path.read))
   end
 
   def markdown_content
-    Kramdown::Document.new(content).to_html.html_safe
+    Kramdown::Document.new(@path.read).to_html
+  end
+
+  private
+
+  def formatter
+    @formatter ||= Rouge::Formatters::HTML.new
+  end
+
+  def lexer
+    @lexer ||= begin
+      if html?
+        Rouge::Lexers::HTML.new
+      elsif javascript?
+        Rouge::Lexers::Javascript.new
+      end
+    end
   end
 end
