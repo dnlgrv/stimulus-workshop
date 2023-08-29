@@ -12,9 +12,7 @@
     <%= yield :head %>
   </head>
 
-  <body class="bg-slate-200" data-controller="layout" data-layout-hide-class="hidden">
-    <%= render partial: "layouts/navigation", locals: { exercise: @exercise } %>
-
+  <body class="bg-slate-200">
     <main>
       <%= yield %>
     </main>
