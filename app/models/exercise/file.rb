@@ -29,7 +29,13 @@ class Exercise::File
   end
 
   def content
-    formatter.format(lexer.lex(@path.read))
+    file_contents = if erb?
+      remove_class_attributes @path.read
+    else
+      @path.read
+    end
+
+    formatter.format(lexer.lex(file_contents))
   end
 
   def markdown_content
@@ -37,6 +43,10 @@ class Exercise::File
   end
 
   private
+
+  def remove_class_attributes(text)
+    text.gsub /\s?(,\s)?class(\=|\:\s)\".*\"/, ""
+  end
 
   def formatter
     @formatter ||= Rouge::Formatters::HTML.new
