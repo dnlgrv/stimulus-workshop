@@ -45,7 +45,7 @@ class Exercise::File
   private
 
   def remove_class_attributes(text)
-    text.gsub /\s?(,\s)?class(\=|\:\s)\".*\"/, ""
+    text.gsub /\s?(,\s)?class(\=|\:\s)\"[^\"]+\"/, ""
   end
 
   def formatter
