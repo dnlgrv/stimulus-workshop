@@ -3,7 +3,7 @@
     <%= render @exercise %>
   </div>
 
-  <aside class="w-[80ch] flex-shrink-0">
+  <aside class="w-[65ch] flex-shrink-0">
     <%= turbo_frame_tag :related_files, src: exercise_file_path(@exercise, (@file || @exercise.initial_file)), target: "_top" %>
   </aside>
 </article>
