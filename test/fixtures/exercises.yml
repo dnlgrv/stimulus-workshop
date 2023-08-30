@@ -14,6 +14,7 @@ eventful:
   position: 2
   related_files:
     - app/views/exercises/_eventful.html.erb
+    - app/javascript/puller.js
     - app/javascript/controllers/logger_controller.js
 
 totally_tabular:
@@ -29,6 +30,7 @@ turbo_tastic:
   related_files:
     - app/views/exercises/_turbo-tastic.html.erb
     - app/javascript/application.js
+    - app/views/invitations/create.turbo_stream.erb
 
 resources:
   name: Resources
