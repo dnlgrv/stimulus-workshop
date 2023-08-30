@@ -16,5 +16,8 @@ application.register("logger", LoggerController)
 import MenuController from "./menu_controller"
 application.register("menu", MenuController)
 
+import NavController from "./nav_controller"
+application.register("nav", NavController)
+
 import TabsController from "./tabs_controller"
 application.register("tabs", TabsController)

@@ -1,0 +1,12 @@
+<%= turbo_frame_tag :exercises do %>
+  <ul class="space-y-4">
+    <% @exercises.each do |exercise| %>
+      <li>
+        <%= link_to exercise, class: token_list("block p-2 rounded text-slate-600 transition hover:text-slate-900", {"font-semibold text-slate-900": exercise == @current_exercise}) do %>
+          <%= exercise.position + 1 %>.
+          <%= exercise.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
