@@ -3,7 +3,7 @@
     Find most of what you need about Stimulus, inculding examples and
     documentation.
   </span>
-* [stimulus-use/stimulus-use]("https://github.com/stimulus-use/stimulus-use)
+* [stimulus-use/stimulus-use](https://github.com/stimulus-use/stimulus-use)
   <span class="block text-slate-600">
     An almost must-have extension to Stimulus, providing a lot of
     functionality that you will almost certainly want to use in your

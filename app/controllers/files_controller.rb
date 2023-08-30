@@ -7,7 +7,9 @@ class FilesController < ApplicationController
       f.to_param == params[:md5]
     end
 
-    unless turbo_frame_request?
+    if turbo_frame_request?
+      render :show, layout: false
+    else
       render "exercises/show"
     end
   end

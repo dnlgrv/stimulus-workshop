@@ -1,4 +1,12 @@
 <%= turbo_frame_tag @turbo_frame_id do %>
+  <nav class="flex gap-2">
+    <% @exercise.related_files_as_files.each do |file| %>
+      <%= link_to file.name, exercise_file_path(@exercise, file),
+                              class: token_list("px-4 py-2 rounded-t transition hover:opacity-100", {"opacity-50 bg-slate-300": !current_file?(file), "bg-[#f6f8fa]": current_file?(file)}),
+                              data: { turbo_frame: @turbo_frame_id, turbo_action: "advance" } %>
+    <% end %>
+  </nav>
+
   <div class="bg-[#f6f8fa] p-6 rounded rounded-tl-none">
     <% if @file.markdown? %>
       <div class="prose text-lg w-[80ch]">
