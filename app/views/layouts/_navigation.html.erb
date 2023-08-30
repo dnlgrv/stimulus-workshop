@@ -2,10 +2,20 @@
   <input type="checkbox" class="hidden peer/nav-toggle" id="nav-toggle" data-nav-target="toggle">
 
   <nav class="transition-all -ml-80 w-80 bg-opacity-10 bg-gradient-to-r from-slate-300/30 to-slate-600/30 backdrop-blur-sm shadow-md p-4 peer-checked/nav-toggle:ml-0">
-    <%= turbo_frame_tag :exercises, src: exercises_path(current_exercise: @exercise), target: "_top" %>
+    <%= turbo_frame_tag :exercises, src: exercises_path(current_exercise: exercise), target: "_top" %>
   </nav>
 
-  <label for="nav-toggle" class="cursor-pointer self-start m-4 scale-125 text-slate-500 transition-all hover:text-slate-800 peer-checked/nav-toggle:rotate-90">
+  <label for="nav-toggle" class="cursor-pointer self-start p-2 scale-125 text-slate-500 transition-all hover:text-slate-800 peer-checked/nav-toggle:rotate-90">
     <%== menu_icon %>
   </label>
 </div>
+
+<nav class="fixed top-0 right-0 flex">
+  <%= link_to_if exercise.has_previous_exercise?, previous_button("opacity-60 hover:opacity-100"), exercise.previous_exercise do %>
+    <%== previous_button("opacity-20 cursor-not-allowed") %>
+  <% end %>
+
+  <%= link_to_if exercise.has_next_exercise?, next_button("opacity-60 hover:opacity-100"), exercise.next_exercise do %>
+    <%== next_button("opacity-20 cursor-not-allowed") %>
+  <% end %>
+</nav>

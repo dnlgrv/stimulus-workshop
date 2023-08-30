@@ -17,7 +17,7 @@
   </head>
 
   <body class="bg-slate-200">
-    <%= render "layouts/navigation", locals: { exercise: @exercise } %>
+    <%= render partial: "layouts/navigation", locals: { exercise: @exercise } %>
 
     <main>
       <%= yield %>
