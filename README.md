@@ -7,10 +7,15 @@
 
 ## Setup
 
+### Local
+
 1. `bin/setup`
 2. `bin/rails db:seed`
 3. `yarn install`
+4. `bin/dev`
 
-## Running
+### Docker
 
-`bin/dev`
+1. `docker compose build`
+2. `docker compose run --rm app bin/rails db:setup`
+3. `docker compose up`

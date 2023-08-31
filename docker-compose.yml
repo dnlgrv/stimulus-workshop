@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    command: ["bin/rails", "server", "--binding", "0.0.0.0"]
+
+    ports:
+      - 3000:3000
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  js:
+    build: .
+    command: ["yarn", "build", "--watch"]
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  css:
+    build: .
+    command: ["yarn", "build:css", "--watch"]
+    volumes:
+      - .:/app
+      - /app/node_modules
