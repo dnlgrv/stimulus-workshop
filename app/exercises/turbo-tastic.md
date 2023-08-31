@@ -1,6 +1,4 @@
-It's Turbo Time!
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/GpLCjrayo-8?si=oa9r6832UB0I8GiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+**It's Turbo Time**!
 
 So this is a bit of an odd exercise where I'm going to suggest we look for a way
 to do this *without* using Stimulus. Weird for a Stimulus Workshop, I know.
