@@ -1,3 +1,5 @@
+<%= turbo_stream.action :clear, "invitation_email" %>
+
 <%= turbo_stream.append :invitations_list do %>
   <%= render @invitation %>
 <% end %>
