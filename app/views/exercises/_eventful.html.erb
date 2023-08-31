@@ -2,6 +2,6 @@
   <%= javascript_include_tag "puller" %>
 <% end %>
 
-<div class="flex h-full">
-  <textarea class="w-full h-full rounded-lg p-4 resize-none" readonly="readonly" placeholder="Ready for messages..."></textarea>
+<div class="flex h-full" data-controller="logger" data-action="puller:message@document->logger#log">
+  <textarea data-logger-target="output" class="w-full h-full rounded-lg p-4 resize-none" readonly="readonly" placeholder="Ready for messages..."></textarea>
 </div>
