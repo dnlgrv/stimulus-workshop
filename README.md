@@ -3,7 +3,7 @@
 ## Requirements
 
 * Ruby 3.1.4
-* NodeJS 20.4.0
+* NodeJS 18.17.1
 
 ## Setup
 
