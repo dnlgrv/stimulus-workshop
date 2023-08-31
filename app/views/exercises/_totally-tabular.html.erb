@@ -1,19 +1,19 @@
 <div data-controller="tabs">
   <nav class="flex gap-2">
-    <a class="bg-white rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#">Design</a>
-    <a class="bg-slate-100 rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#">Build</a>
-    <a class="bg-slate-100 rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#">Analyze</a>
+    <a data-tabs-target="tab" class="bg-slate-100 rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#" data-action="tabs#select:prevent" data-tabs-index-param="0">Design</a>
+    <a data-tabs-target="tab" class="bg-slate-100 rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#" data-action="tabs#select:prevent" data-tabs-index-param="1">Build</a>
+    <a data-tabs-target="tab" class="bg-slate-100 rounded-t border-slate-200 border border-b-0 px-6 py-3 transition hover:bg-slate-50" href="#" data-action="tabs#select:prevent" data-tabs-index-param="2">Analyze</a>
   </nav>
 
-  <section class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center flex">
+  <section data-tabs-target="section" class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center hidden">
     <%= image_tag "designer.png", class: "w-3/4 max-h-3/4" %>
   </section>
 
-  <section class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center hidden">
+  <section data-tabs-target="section" class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center hidden">
     <%= image_tag "coder.jpg", class: "w-3/4 max-h-3/4" %>
   </section>
 
-  <section class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center hidden">
+  <section data-tabs-target="section" class="bg-white rounded-b rounded-tr border-slate-200 border border-t-0 p-12 items-center justify-center hidden">
     <%= image_tag "analyst.png", class: "w-3/4 max-h-3/4" %>
   </section>
 </div>
