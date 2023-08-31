@@ -1,0 +1,15 @@
+<%= form_with url: preferences_path,
+              method: :patch,
+              scope: :preferences,
+              class: "space-y-4",
+              data: { controller: "form", action: "turbo:submit-end->form#reloadPage" } do |f| %>
+  <%= f.label :hide_css_classes, class: "block" do %>
+    <%= f.check_box :hide_css_classes, checked: Current.hide_css_classes, data: { action: "change->form#submit" } %>
+    Hide CSS classes?
+  <% end %>
+
+  <%= f.label :show_related_files, class: "block" do %>
+    <%= f.check_box :show_related_files, checked: Current.show_related_files, data: { action: "change->form#submit" } %>
+    Show related files?
+  <% end %>
+<% end %>

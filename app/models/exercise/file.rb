@@ -29,7 +29,7 @@ class Exercise::File
   end
 
   def content
-    file_contents = if erb?
+    file_contents = if erb? && Current.hide_css_classes
       remove_class_attributes @path.read
     else
       @path.read

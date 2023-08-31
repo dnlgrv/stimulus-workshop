@@ -1,8 +1,10 @@
 <div class="fixed top-0 bottom-0 flex" data-controller="nav" data-action="nav:click:outside->nav#close">
   <input type="checkbox" class="hidden peer/nav-toggle" id="nav-toggle" data-nav-target="toggle">
 
-  <nav class="transition-all -ml-80 w-80 bg-opacity-10 bg-gradient-to-r from-slate-300/30 to-slate-600/30 backdrop-blur-sm shadow-md p-4 peer-checked/nav-toggle:ml-0">
+  <nav class="flex flex-col justify-between transition-all -ml-80 w-80 bg-opacity-10 bg-gradient-to-r from-slate-300/30 to-slate-600/30 backdrop-blur-sm shadow-md p-4 peer-checked/nav-toggle:ml-0">
     <%= turbo_frame_tag :exercises, src: exercises_path(current_exercise: exercise), target: "_top" %>
+
+    <%= render "preferences/form" %>
   </nav>
 
   <label for="nav-toggle" class="cursor-pointer self-start p-2 scale-125 text-slate-500 transition-all hover:text-slate-800 peer-checked/nav-toggle:rotate-90">
