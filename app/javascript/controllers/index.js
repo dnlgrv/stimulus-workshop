@@ -10,14 +10,8 @@ application.register("form", FormController)
 import HelloWorldController from "./hello_world_controller"
 application.register("hello-world", HelloWorldController)
 
-import LazyLoadController from "./lazy_load_controller"
-application.register("lazy-load", LazyLoadController)
-
 import LoggerController from "./logger_controller"
 application.register("logger", LoggerController)
-
-import MenuController from "./menu_controller"
-application.register("menu", MenuController)
 
 import NavController from "./nav_controller"
 application.register("nav", NavController)
