@@ -18,6 +18,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    tty: true
+    stdin_open: true
 
   css:
     build: .
@@ -25,3 +27,5 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    tty: true
+    stdin_open: true
